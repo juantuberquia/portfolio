@@ -17,7 +17,7 @@ const NavDiv = styled.div`
   justify-content: flex-end;
   padding-right: 5%;
   @media (max-width: 576px) {
-    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -32,17 +32,19 @@ const Button = styled.div`
 
 const Headering = () => {
   return (
-    <NavDiv>
-      <Button>
-        <a href="/#">About me</a>
-      </Button>
-      <Button>
-        <a href="/#"> Jobs </a>
-      </Button>
-      <Button>
-        <a href="/#"> Contact </a>
-      </Button>
-    </NavDiv>
+    <div>
+      <NavDiv>
+        <Button>
+          <a href="/#">About me</a>
+        </Button>
+        <Button>
+          <a href="/#"> Jobs </a>
+        </Button>
+        <Button>
+          <a href="/#"> Contact </a>
+        </Button>
+      </NavDiv>
+    </div>
   );
 };
 

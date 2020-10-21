@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Headering from "./components/Headering";
-import NavBar from "./components/NavBar";
+import About from "./components/About";
 import styled from "@emotion/styled";
 import img from "./images/fondo.jpg";
 
@@ -16,7 +16,7 @@ function App() {
     <Fragment>
       <BackgroundImg src={img} alt="imgBack" />
       <Headering />
-      <NavBar />
+      <About />
     </Fragment>
   );
 }
