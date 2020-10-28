@@ -27,6 +27,7 @@ const Button = styled.div`
   a {
     text-decoration: none;
     font-weight: bold;
+    color: #2a2c2a;
   }
 `;
 

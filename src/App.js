@@ -9,6 +9,7 @@ const BackgroundImg = styled.img`
   filter: opacity(0.4);
   position: absolute;
   width: 100%;
+  z-index: -10;
 `;
 
 function App() {
