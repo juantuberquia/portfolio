@@ -15,6 +15,7 @@ const Profile = styled.div`
 const ContentImg = styled.div`
   width: 60%;
   margin-left: 12%;
+  margin-top: 5%;
   animation: 1s ${keyframes`${slideInDown}`};
   img {
     width: 100%;
@@ -22,12 +23,12 @@ const ContentImg = styled.div`
   }
 `;
 
-const Text = styled.p`
+const Text = styled.h1`
   font-family: "Lato";
   font-weight: bold;
   color: #8100b9;
   width: 45%;
-  font-size: 22px;
+  font-size: 25px;
   animation: 2s ${keyframes`${fadeInRight}`} 0.9s backwards;
 `;
 
@@ -36,7 +37,7 @@ const Text2 = styled.p`
   font-weight: bold;
   color: #8100b9;
   width: 45%;
-  font-size: 22px;
+  font-size: 18px;
   animation: 2s ${keyframes`${fadeInRight}`} 2s backwards;
 `;
 
@@ -65,9 +66,15 @@ const About = () => {
           <img src={photo} alt="photoProfile" />
         </ContentImg>
         <div>
-          <Text>Hi 👋, I'm Juan Andres.</Text>
+          <Text>
+            <span role="img" aria-label="hand">
+              👋
+            </span>
+            Hi , I'm Juan Andres.
+          </Text>
           <Text2>
-            I studied Electronic but my passion is Development Fron-Tend
+            I'm Frontend Developer, passionate about technology. I studied at
+            Acamica Full Stack Developer
           </Text2>
         </div>
       </Profile>

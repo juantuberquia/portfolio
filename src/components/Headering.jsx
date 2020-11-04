@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
+import imgAvatar from "../images/logo.ico";
 
 // @media (min-width: 576px) { ... }
 
@@ -14,8 +16,16 @@ import styled from "@emotion/styled";
 
 const NavDiv = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-right: 5%;
+  background-color: #a533ff;
+  height: 70px;
+  align-items: center;
+  -webkit-box-shadow: 0px 15px 66px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 15px 66px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 15px 66px -11px rgba(0, 0, 0, 0.75);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   @media (max-width: 576px) {
     align-items: center;
   }
@@ -24,6 +34,7 @@ const NavDiv = styled.div`
 const Button = styled.div`
   margin: 1rem;
   font-family: "Lato";
+  display: inline-block;
   a {
     text-decoration: none;
     font-weight: bold;
@@ -31,21 +42,36 @@ const Button = styled.div`
   }
 `;
 
+const ContentImg = styled.div`
+  width: 4%;
+  margin-left: 5%;
+
+  img {
+    width: 100%;
+    border-radius: 40%;
+  }
+`;
+
 const Headering = () => {
   return (
-    <div>
-      <NavDiv>
+    <NavDiv>
+      <ContentImg>
+        <Link to="/">
+          <img src={imgAvatar} alt="logo" />
+        </Link>
+      </ContentImg>
+      <div>
         <Button>
-          <a href="/#">About me</a>
+          <Link to="/">About me</Link>
         </Button>
         <Button>
-          <a href="/#"> Jobs </a>
+          <Link to="/jobs">Jobs</Link>
         </Button>
         <Button>
-          <a href="/#"> Contact </a>
+          <Link to="/contact"> Contact</Link>
         </Button>
-      </NavDiv>
-    </div>
+      </div>
+    </NavDiv>
   );
 };
 
