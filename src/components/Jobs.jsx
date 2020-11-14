@@ -6,30 +6,24 @@ import admin from "../images/admin.gif";
 import crypto from "../images/crypto.gif";
 import financial from "../images/financial.gif";
 import weather from "../images/weather.gif";
-import { Fade } from "react-slideshow-image";
+import { Zoom } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 const GridContainer = styled.div`
-  /* display: grid;
-  grid-template-columns: 33% 33% 33%;
-  margin: 2% auto 0 auto; */
-  /* text-align: center; */
-  /* height: 400px; */
-  width: 60%;
-  margin: auto;
-  /* display: flex; */
-  /* grid-gap: 10px; */
+  width: 50%;
+  margin: 2rem auto 0 auto;
 `;
 
 const GridItem = styled.div`
   width: 100%;
-  /* height: 250px; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* border: 1px solid black; */
+  height: 400px;
 `;
 
 const Text = styled.div`
-  height: 30px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgb(100, 21, 163);
   background: rgb(92, 11, 156);
   background: linear-gradient(
@@ -41,17 +35,19 @@ const Text = styled.div`
     color: #ffffff;
     font-family: "Lato";
     margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 `;
 
 const ContentImg = styled.div`
   width: 100%;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: auto;
 `;
 
 const Paragraph = styled.p`
@@ -66,7 +62,7 @@ const Paragraph = styled.p`
 `;
 
 const Button = styled.button`
-  /* position: absolute; */
+  position: absolute;
 `;
 
 //1.vamor a segui el ejemplo de gifos con los projects, un div arriba con el nombre del project la captura del project 100%,y la desccruptioc de loslenguaje sutlizados con un hover, al hacer hooever aparecr dicha info
@@ -75,8 +71,8 @@ const Button = styled.button`
 
 const proprietes = {
   duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
+  transitionDuration: 1000,
+  // infinite: true,
   indicators: true,
   arrows: true,
 };
@@ -84,8 +80,8 @@ const proprietes = {
 const Jobs = () => {
   return (
     <GridContainer className="slide-container">
-      <Fade {...proprietes}>
-        <GridItem className="each-fade">
+      <Zoom {...proprietes} scale={0.4}>
+        <GridItem>
           <Text>
             <p> Insurance Your Car</p>
           </Text>
@@ -102,7 +98,7 @@ const Jobs = () => {
             </Button>
           </ContentImg>
         </GridItem>
-        <GridItem className="each-fade">
+        <GridItem>
           <Text>
             <p> Gifos Project</p>
           </Text>
@@ -118,7 +114,7 @@ const Jobs = () => {
             </Button>
           </ContentImg>
         </GridItem>
-        <GridItem className="each-fade">
+        <GridItem>
           <Text>
             <p> Admin Appointment </p>
           </Text>
@@ -132,7 +128,7 @@ const Jobs = () => {
             </Button>
           </ContentImg>
         </GridItem>
-        <GridItem className="each-fade">
+        <GridItem>
           <Text>
             <p> Crypto</p>
           </Text>
@@ -148,7 +144,7 @@ const Jobs = () => {
             </Button>
           </ContentImg>
         </GridItem>
-        <GridItem className="each-fade">
+        <GridItem>
           <Text>
             <p> Financial Plan</p>
           </Text>
@@ -162,7 +158,7 @@ const Jobs = () => {
             </Button>
           </ContentImg>
         </GridItem>
-        <GridItem className="each-fade">
+        <GridItem>
           <Text>
             <p>Clima App</p>
           </Text>
@@ -178,7 +174,7 @@ const Jobs = () => {
             </Button>
           </ContentImg>
         </GridItem>
-      </Fade>
+      </Zoom>
     </GridContainer>
   );
 };
