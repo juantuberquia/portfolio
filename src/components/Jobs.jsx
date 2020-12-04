@@ -1,22 +1,23 @@
 import React from "react";
-import styled from "@emotion/styled";
 import insurance from "../images/insurance.gif";
 import gifos from "../images/gifos.gif";
 import admin from "../images/admin.gif";
 import crypto from "../images/crypto.gif";
 import financial from "../images/financial.gif";
 import weather from "../images/weather.gif";
+import styled, { keyframes } from "styled-components";
 import { Zoom } from "react-slideshow-image";
+import { zoomIn } from "react-animations";
 import "react-slideshow-image/dist/styles.css";
 
 const GridContainer = styled.div`
-  width: 50%;
+  width: 60%;
   margin: 2rem auto 0 auto;
 `;
 
 const GridItem = styled.div`
   width: 100%;
-  height: 400px;
+  height: 450px;
 `;
 
 const Text = styled.div`
@@ -24,6 +25,8 @@ const Text = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background: rgb(100, 21, 163);
   background: rgb(92, 11, 156);
   background: linear-gradient(
@@ -31,6 +34,7 @@ const Text = styled.div`
     rgba(92, 11, 156, 1) 0%,
     rgba(165, 51, 255, 1) 100%
   );
+
   p {
     color: #ffffff;
     font-family: "Lato";
@@ -43,38 +47,92 @@ const Text = styled.div`
 
 const ContentImg = styled.div`
   width: 100%;
-  box-sizing: border-box;
+  /* background: rgba(30, 29, 29, 0.9);  */
+
+  &:hover {
+    /* filter: grayscale(100%); */
+    /* filter: opacity(0.4); */
+
+    p {
+      display: block;
+      animation: 0.2s ${keyframes`${zoomIn}`};
+      /* transition: 2s; */
+    }
+
+    button {
+      display: block;
+      animation: 0.2s ${keyframes`${zoomIn}`};
+      z-index: 100;
+    }
+
+    img {
+      filter: opacity(0.1);
+      /* filter: grayscale(50%); */
+
+      /* background: rgba(30, 30, 39, 0.9); */
+    }
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
+  height: 400px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
 
 const Paragraph = styled.p`
-  color: #ffffff;
+  color: #1e0730;
   font-family: "Lato";
   font-weight: bold;
+  font-size: 25px;
   letter-spacing: 1px;
+  position: relative;
+  top: -260px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   display: none;
-  :hover {
-    display: block;
-  }
 `;
 
 const Button = styled.button`
-  position: absolute;
+  position: relative;
+  left: 43%;
+  top: -200px;
+  width: 15%;
+  height: 40px;
+  border: none;
+  background: #4180f6;
+  border-radius: 10px;
+  display: none;
+
+  :hover {
+    background: rgb(100, 21, 163);
+    background: rgb(92, 11, 156);
+    background: linear-gradient(
+      90deg,
+      rgba(92, 11, 156, 1) 0%,
+      rgba(165, 51, 255, 1) 100%
+    );
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Lato";
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
 `;
 
-//1.vamor a segui el ejemplo de gifos con los projects, un div arriba con el nombre del project la captura del project 100%,y la desccruptioc de loslenguaje sutlizados con un hover, al hacer hooever aparecr dicha info
-// 2. add slides a los proyectos de manera que se mantegan el 10 vh del img de fondo se vea interactivo
-// className="slide-container"
-
 const proprietes = {
-  duration: 5000,
+  // duration: 5000,
   transitionDuration: 1000,
-  // infinite: true,
+  infinite: true,
   indicators: true,
-  arrows: true,
+  // arrows: true,
 };
 
 const Jobs = () => {
@@ -168,7 +226,7 @@ const Jobs = () => {
               HTML, CSS, React.js and consuming the weather API'S
             </Paragraph>
             <Button>
-              <a href="https://climaweather.netlify.app" target="_blanck">
+              <a href="https://weather-clima-app.netlify.app/" target="_blanck">
                 Project
               </a>
             </Button>

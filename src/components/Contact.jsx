@@ -1,35 +1,26 @@
 import React from "react";
-import { Fade } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+import styled from "styled-components";
 
-const fadeImages = [
-  "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-  "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-  "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-];
+const InfoContact = styled.div`
+  background-color: #ffffff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 30%;
+  height: auto;
+  /* text-align: center; */
+  /* position: absolute; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  /* padding-top: 1%; */
+  padding-bottom: 3%;
+  -webkit-box-shadow: 0px 0px 66px 10px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 0px 0px 66px 10px rgba(0, 0, 0, 0.31);
+  box-shadow: 0px 0px 66px 10px rgba(0, 0, 0, 0.31);
+`;
 
 export default function Contact() {
-  return (
-    <div className="slide-container">
-      <Fade>
-        <div className="each-fade">
-          <div>
-            <p> Insurance Your Car</p>
-          </div>
-          <div>
-            <img src={fadeImages[0]} />
-            <p> texto del img</p>
-          </div>
-        </div>
-        <div className="each-fade">
-          <img src={fadeImages[1]} />
-          <p> Insurance Your 2</p>
-        </div>
-        <div className="each-fade">
-          <img src={fadeImages[2]} />
-          <p> Insurance Your Car 3</p>
-        </div>
-      </Fade>
-    </div>
-  );
+  return <InfoContact></InfoContact>;
 }

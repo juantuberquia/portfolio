@@ -35,10 +35,26 @@ const Button = styled.div`
   margin: 1rem;
   font-family: "Lato";
   display: inline-block;
+  box-sizing: border-box;
+
+  :hover {
+    a {
+      color: #fff;
+      text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.68);
+      font-size: 20px;
+      transition: 0.1s;
+    }
+  }
+
+  /*, añadir un footer con la info de la redes y que tales   realizar la descraa de la cv desde el about, anexar la info del contac,  cambiar la entrada de la phoyo de perfil el estilo qu no venga de ariba, hacer el respomsive */
+
   a {
     text-decoration: none;
     font-weight: bold;
     color: #2a2c2a;
+    font-size: 20px;
+    letter-spacing: 1px;
+    box-sizing: border-box;
   }
 `;
 
@@ -60,7 +76,7 @@ const Headering = () => {
           <img src={imgAvatar} alt="logo" />
         </Link>
       </ContentImg>
-      <div>
+      <div className="content">
         <Button>
           <Link to="/">About me</Link>
         </Button>

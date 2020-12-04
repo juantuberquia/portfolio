@@ -27,8 +27,8 @@ const Text = styled.h1`
   font-family: "Lato";
   font-weight: bold;
   color: #8100b9;
-  width: 45%;
-  font-size: 25px;
+  width: 48%;
+  font-size: 2rem;
   animation: 2s ${keyframes`${fadeInRight}`} 0.9s backwards;
 `;
 
@@ -37,8 +37,8 @@ const Text2 = styled.p`
   font-weight: bold;
   color: #8100b9;
   width: 45%;
-  font-size: 18px;
-  animation: 2s ${keyframes`${fadeInRight}`} 2s backwards;
+  font-size: 1.2rem;
+  animation: 2s ${keyframes`${fadeInRight}`} 2.4s backwards;
 `;
 
 const ContentIcon = styled.div`
@@ -46,7 +46,7 @@ const ContentIcon = styled.div`
   width: 30%;
   justify-content: center;
   margin-top: 2%;
-  animation: 2s ${keyframes`${bounceInLeft}`} 4.5s backwards;
+  animation: 2s ${keyframes`${bounceInLeft}`} 7.5s backwards;
 `;
 
 const Icon = styled.div`
@@ -70,11 +70,12 @@ const About = () => {
             <span role="img" aria-label="hand">
               👋
             </span>
-            Hi , I'm Juan Andres.
+            Hi <br></br>I'm Juan Andres T.
           </Text>
           <Text2>
             I'm Frontend Developer, passionate about technology. I studied at
-            Acamica Full Stack Developer
+            Acamica Full Stack Developer<br></br> If you want to know more about
+            me, here are my social networks.
           </Text2>
         </div>
       </Profile>
