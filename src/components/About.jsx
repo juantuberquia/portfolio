@@ -1,10 +1,8 @@
 import React from "react";
+import Icons from "./Icons";
 import photo from "../images/photo.jpg";
-import twitter from "../images/gorjeo.png";
-import linke from "../images/linkedin.png";
-import git from "../images/github.png";
 import styled, { keyframes } from "styled-components";
-import { slideInDown, bounceInLeft, fadeInRight } from "react-animations";
+import { slideInDown, fadeInRight } from "react-animations";
 
 const Profile = styled.div`
   display: grid;
@@ -41,23 +39,6 @@ const Text2 = styled.p`
   animation: 2s ${keyframes`${fadeInRight}`} 2.4s backwards;
 `;
 
-const ContentIcon = styled.div`
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  margin-top: 2%;
-  animation: 2s ${keyframes`${bounceInLeft}`} 7.5s backwards;
-`;
-
-const Icon = styled.div`
-  width: 30px;
-  margin-right: 1rem;
-  a img {
-    width: 100%;
-    color: #006eaf;
-  }
-`;
-
 const About = () => {
   return (
     <div>
@@ -79,35 +60,7 @@ const About = () => {
           </Text2>
         </div>
       </Profile>
-      <ContentIcon>
-        <Icon>
-          <a
-            href="https://www.linkedin.com/in/juantuberquia/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={linke} alt="linkedin" />
-          </a>
-        </Icon>
-        <Icon>
-          <a
-            href="https://twitter.com/JuanTuberquiaa"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={twitter} alt="twitter" />
-          </a>
-        </Icon>
-        <Icon>
-          <a
-            href="https://github.com/juantuberquia"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={git} alt="github" />
-          </a>
-        </Icon>
-      </ContentIcon>
+      <Icons />
     </div>
   );
 };

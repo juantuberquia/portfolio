@@ -4,6 +4,19 @@ body {
   padding: 0;
 }
 
-.content {
-  /* width: 60%; */
+.icon {
+  font-size: 40px;
+  color: black;
+  padding-top: 20%;
+}
+.icon:hover {
+  color: #a533ff;
+}
+
+.center {
+  text-align: center;
+}
+
+.paragraphIcon {
+  grid-column: 1 / span 2;
 }
