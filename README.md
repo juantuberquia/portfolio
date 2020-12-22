@@ -1,3 +1,18 @@
+# Portfolio
+
+## ✍🏻 Description
+This app was built in React.js
+
+You might see the result here → [Portfolio]  https://juansito-dev.netlify.app/
+
+## Technologies
+1. HTML
+2. CSS
+3. React.js -> hooks
+4. react-animations, react-router and react-fontawesome
+5. styled-components
+   
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
