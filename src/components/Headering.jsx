@@ -3,17 +3,6 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import imgAvatar from "../images/logo.ico";
 
-// @media (min-width: 576px) { ... }
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-
 const NavDiv = styled.div`
   display: flex;
   justify-content: space-between;
@@ -46,8 +35,6 @@ const Button = styled.div`
     }
   }
 
-  /*, añadir un footer con la info de la redes y que tales   realizar la descraa de la cv desde el about, anexar la info del contac,  cambiar la entrada de la phoyo de perfil el estilo qu no venga de ariba, hacer el respomsive */
-
   a {
     text-decoration: none;
     font-weight: bold;
@@ -61,6 +48,9 @@ const Button = styled.div`
 const ContentImg = styled.div`
   width: 4%;
   margin-left: 5%;
+  @media (max-width: 576px) {
+    width: 12%;
+  }
 
   img {
     width: 100%;

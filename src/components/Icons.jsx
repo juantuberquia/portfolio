@@ -10,12 +10,17 @@ const ContentIcon = styled.div`
   width: 30%;
   justify-content: center;
   margin-top: 2%;
-  animation: 2s ${keyframes`${bounceInLeft}`} 7.5s backwards;
+  animation: 2s ${keyframes`${bounceInLeft}`} 1 backwards;
+  @media (max-width: 576px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const Icon = styled.div`
   width: 30px;
   margin-right: 1rem;
+
   a img {
     width: 100%;
     color: #006eaf;

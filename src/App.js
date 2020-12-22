@@ -7,8 +7,11 @@ import styled from "@emotion/styled";
 import img from "./images/fondo.jpg";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const BackgroundImg = styled.img`
+const BackgroundImg = styled.div`
   height: 100vh;
+  background-image: url(${img});
+  background-position: center;
+  background-size: cover;
   filter: opacity(0.4);
   position: absolute;
   width: 100%;
@@ -18,7 +21,7 @@ const BackgroundImg = styled.img`
 function App() {
   return (
     <Router>
-      <BackgroundImg src={img} alt="imgBack" />
+      <BackgroundImg />
       <Headering />
       <Switch>
         <Route path="/" exact>

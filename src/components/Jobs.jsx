@@ -13,6 +13,9 @@ import "react-slideshow-image/dist/styles.css";
 const GridContainer = styled.div`
   width: 60%;
   margin: 2rem auto 0 auto;
+  @media (max-width: 576px) {
+    width: 90%;
+  }
 `;
 
 const GridItem = styled.div`
@@ -47,12 +50,8 @@ const Text = styled.div`
 
 const ContentImg = styled.div`
   width: 100%;
-  /* background: rgba(30, 29, 29, 0.9);  */
 
   &:hover {
-    /* filter: grayscale(100%); */
-    /* filter: opacity(0.4); */
-
     p {
       display: block;
       animation: 0.2s ${keyframes`${zoomIn}`};
@@ -67,9 +66,6 @@ const ContentImg = styled.div`
 
     img {
       filter: opacity(0.1);
-      /* filter: grayscale(50%); */
-
-      /* background: rgba(30, 30, 39, 0.9); */
     }
   }
 `;
@@ -100,7 +96,7 @@ const Button = styled.button`
   position: relative;
   left: 43%;
   top: -200px;
-  width: 15%;
+  width: auto;
   height: 40px;
   border: none;
   background: #4180f6;

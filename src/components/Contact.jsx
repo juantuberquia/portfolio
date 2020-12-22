@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import Icons from "./Icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
   faMapMarkerAlt,
   faMobile,
 } from "@fortawesome/free-solid-svg-icons";
-
-// import Icons from "./Icons";
 
 const InfoContact = styled.div`
   display: grid;
@@ -26,6 +25,11 @@ const InfoContact = styled.div`
   -webkit-box-shadow: 0px 0px 66px 10px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: 0px 0px 66px 10px rgba(0, 0, 0, 0.31);
   box-shadow: 0px 0px 66px 10px rgba(0, 0, 0, 0.31);
+  @media (max-width: 576px) {
+    width: 80%;
+    align-items: center;
+    margin-top: 30%;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -60,16 +64,8 @@ export default function Contact() {
       </div>
       <div className="paragraphIcon">
         <Paragraph> You can follow me on: </Paragraph>
+        <Icons />
       </div>
-
-      {/* <Paragraph>
-        E-mail: <span> tuberquia26@hotmail.com </span>{" "}
-      </Paragraph>
-      <Paragraph>
-        Number: <span> (+57) 3185861827 </span>{" "}
-      </Paragraph>
-      <Paragraph> You can follow me on: </Paragraph>
-      <Icons /> */}
     </InfoContact>
   );
 }
